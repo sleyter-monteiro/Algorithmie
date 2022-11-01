@@ -26,3 +26,5 @@ print('while loop')
 1 = 0
 while i < len(array_test):
     print(array_test[])
+
+Wsh la fam
