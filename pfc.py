@@ -29,4 +29,5 @@ while i < len(array_test):
 
 Wsh la fam
 
-Je tilt sah
+Salut à tous
+Bienvenue 
