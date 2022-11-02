@@ -1,0 +1,46 @@
+PSEUDO CODE
+Algorithme_Pierre_Feuille_Ciseaux
+Initation de la liste pfc: 
+0 <- Pierre
+1 <- Feuille
+2 <- Ciseaux
+Début
+          Ecrire ('Choississez entre Pierre=0, Feuille= 1 ou Ciseaux=2')
+          Lire('user_choice)
+          Lire('bot_choice)
+          
+         Comparaison des variables:
+         Variable Pierre >  Variable Ciseaux
+         Variable Pierre == Variable Pierre
+         Variable Feuille > Variable Pierre
+         Variable Feuille == Variable Feuille
+         Variable Ciseaux > Variable Feuille
+         Variable Ciseaux == Variable Ciseaux
+
+      Programme utilisateur ia: 
+      Premier round -> bot_choice est la variable Pierre qui égal à 1.
+      Deuxième round -> bot_choice va adapter son choix par rapport à user_choice de la   premiere manche.
+         
+
+       Comparaison des user_choice et bot_choice:
+       Si user_choice est 0(Pierre) et que bot_choice est 0(Pierre) alors match nul=0
+       Si user_choice est 0(Pierre) et que bot_choice est 1(Feuille) alors User_choice perd
+       Ecrire('user_choice à perdu!')
+       Si user_choice est 0(Pierre) et que bot_choice est 2(Ciseaux) alors user-choice gagne
+       Ecrire('user_choice à gagner!')
+ 
+       Si user_choice est 1(Feuille) et que bot_choice est 1(Feuille) alors match nul=0
+       Si user_choice est 1(Feuille) et que bot_choice est 0(Pierre) alors User_choice gagne
+       Ecrire('user_choice à gagner!')
+       Si user_choice est 1(Feuille) et que bot_choice est 2(Ciseaux) alors user-choice perd
+       Ecrire('user_choice à perdu!')
+       
+       Si user_choice est 2(Ciseaux) et que bot_choice est 2(Ciseaux) alors match nul=0
+       Si user_choice est 2(Ciseaux) et que bot_choice est 0(Pierre) alors User_choice perd
+       Ecrire('user_choice à perdu!')
+       Si user_choice est 2(Ciseaux) et que bot_choice est 1(Feuille) alors user-choice gagne
+       Ecrire('user_choice à gagner!')
+ 
+Ecrire ('Le gagnant est ...') qui va être déterminer par le score.
+
+   Fin       
