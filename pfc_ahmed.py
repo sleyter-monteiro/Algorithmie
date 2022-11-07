@@ -3,7 +3,51 @@ class game():
     def __init__(self):
         self.score_bot=0
         self.score_1=0
+<<<<<<< Updated upstream
         self.liste_pfc = ["pierre","feuille","ciseaux"]
+=======
+        self.score_2=0
+        self.pierre = '''
+            _______
+        ---'   ____)
+              (_____)
+              (_____)
+              (____)
+        ---.__(___)
+        '''
+
+        self.papier = '''
+            _______
+        ---'   ____)____
+                  ______)
+                  _______)
+                 _______)
+        ---.__________)
+        '''
+
+        self.ciseaux = '''
+            _______
+        ---'   ____)____
+                  ______)
+               __________)
+              (____)
+        ---.__(___)
+        '''
+
+        while True : 
+    print(nom, " : " , user_victoires, "égalités : ", nuls, " PC: ", pc_victoires)
+    coupJoueur = input("Entrez votre coup: (p)ierre, (f)euille, (c)iseaux ou (q)uitter.")
+    if coupJoueur == "q" :
+         print("Vous avez quittez le jeu.")
+         break
+
+    if choice_pfc_player_1 != "pierre" or "Pierre" and choice_pfc_player_1  != "papier" or "Papier" and choice_pfc_player_1 != "ciseaux" or "Ciseaux" :
+         continue
+    
+
+        self.game_images = [self.pierre, self.papier, self.ciseaux]
+        self.liste_pfc = ["Pierre","Papier","Ciseaux"]
+>>>>>>> Stashed changes
     def rules(self):
         print("-------- BIENVENUE SUR LE JEU DE PIERRE PAPIER CISEAUX-----------""\n""CREE PAR SLEYTER / MYRIAM / AHMED")
         nom_joueur = str(input("Comment tu t'appelle ?"))
