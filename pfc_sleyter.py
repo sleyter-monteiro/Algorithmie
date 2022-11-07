@@ -22,7 +22,7 @@ def pfc():
         print("Egalité, aucun point accordé")
         
     elif joueur_choix in ["Pierre","pierre","P","p"]:
-        if PC_choice== "Feuille":
+        if PC_choice == "Feuille":
             print("PC : j'ai choisi feuille et j'ai gagné :D")
             PCwin += 1
             print("Score PC" + str(PCwin) + '\n' + "Votre score" + str(Joueurwin))
