@@ -96,3 +96,125 @@ while gagne == 0:
     else:
         joueur = 1
 
+
+
+
+
+
+#Utilisateur ia, pas terminé 
+"""
+compteur_adversaire = 0
+compteur_ia = 0
+compteur_ia = 0
+compteur_casevide = 0
+
+def compteur(explo_case, compteur_adversaire, compteur_ia, compteur_casevide):
+    if explo_case == 'O' :
+        compteur_adversaire += 1
+    if explo_case == '❌' :
+        compteur_ia += 1
+    if explo_case == '" "' :
+        compteur_casevide += 1
+    return(compteur_adversaire, compteur_ia, compteur_casevide)
+
+for i in range(len(grille)) :
+
+    if grille[i] == " " :
+        # exploration sur ma ligne
+        if i >= 0 and i <= 2 :
+            # première ligne
+            exploration = i
+            while exploration > 0 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+            exploration = i 
+            while exploration < 2 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+            exploration = i 
+        if i >= 3 and i <=5 :
+             while exploration > 3 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+             while exploration < 5 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+             exploration = i 
+
+        if i>= 6 and i <=8 :
+             while exploration > 6 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+             while exploration < 8 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+             exploration = i 
+
+        if  i>= 0 and i <=8 : 
+                while exploration >0 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+                while exploration <8 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+        
+        if i>= 2 and i <=6 :
+            while exploration >2 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+            while exploration <6 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+
+        if i>= 0 and i <=6 :
+            while exploration >0 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+            while exploration <6 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+        if i>= 1 and i <= 7 :
+            while exploration >1 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+            while exploration <7 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+        
+        if i>=2 and i <=8 :
+            while exploration >2 :
+                exploration = exploration - 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+            while exploration <8 : 
+                exploration = exploration + 1
+                explo_case = grille[exploration]
+                compteur_adversaire, compteur_ia, compteur_casevide = compteur(explo_case ,compteur_adversaire, compteur_ia, compteur_casevide)
+                exploration = i 
+        
+"""
