@@ -1,15 +1,12 @@
-from tkinter import *
-from tkinter.messagebox import *
 print("Bienvenue dans le jeu du morpion!")
 print("Les règles sont simple: le but est d'aligner trois chasubles pour faire un Morpion. ")
 
-
 # Afficher la grille
-def afficher_grille(grille):
+def afficher_grille(grille): 
     print("     0)  1)  2)")
     print("   -------------")
     print("0)", end='')
-    for i in range(3):
+    for i in range(3): #range(3) nous renvoit à: [0,1,2]
         print(" | " + str(grille[i]), end='')
     print(" |")
     print("   -------------")
@@ -39,7 +36,7 @@ def tour(grille, joueur):
     print("Vous avez joué la case (" + colonne + ";" + ligne + ")")
     
 # Empêchement anomalie du jeu 
-    n = ['0', '1', '2']
+    n = ['0', '1', '2'] #si la case sélectionné n'est pas vide alors on renvoie le message du choix des cases.
     while colonne not in n or ligne not in n :
         print("Tu dois choisir un chiffre compris entre 0 et 2")
         colonne = input("Entrez le numero de la colonne : ")
@@ -56,44 +53,35 @@ def tour(grille, joueur):
         grille[int(colonne) + int(ligne) * 3] = "❌"
     if joueur == 2:
         grille[int(colonne) + int(ligne) * 3] = "0"
-    afficher_grille(grille)
+
 
 # Détection des victoires
 def est_gagnant(grille):
-    if (grille[0] == grille[1]) and (grille[0]
-                                     == grille[2]) and (grille[0] != " "):
+    if (grille[0] == grille[1]) and (grille[0]== grille[2]) and (grille[0] != " "):
         return 1
-    if (grille[3] == grille[4]) and (grille[3]
-                                     == grille[5]) and (grille[3] != " "):
+    if (grille[3] == grille[4]) and (grille[3]== grille[5]) and (grille[3] != " "):
         return 1
-    if (grille[6] == grille[7]) and (grille[6]
-                                     == grille[8]) and (grille[6] != " "):
+    if (grille[6] == grille[7]) and (grille[6]== grille[8]) and (grille[6] != " "):
         return 1
-    if (grille[0] == grille[3]) and (grille[0]
-                                     == grille[6]) and (grille[0] != " "):
+    if (grille[0] == grille[3]) and (grille[0]== grille[6]) and (grille[0] != " "):
         return 1
-    if (grille[1] == grille[4]) and (grille[1]
-                                     == grille[7]) and (grille[1] != " "):
+    if (grille[1] == grille[4]) and (grille[1]== grille[7]) and (grille[1] != " "):
         return 1
-    if (grille[2] == grille[5]) and (grille[2]
-                                     == grille[8]) and (grille[2] != " "):
+    if (grille[2] == grille[5]) and (grille[2]== grille[8]) and (grille[2] != " "):
         return 1
-    if (grille[0] == grille[4]) and (grille[0]
-                                     == grille[8]) and (grille[0] != " "):
+    if (grille[0] == grille[4]) and (grille[0]== grille[8]) and (grille[0] != " "):
         return 1
-    if (grille[2] == grille[4]) and (grille[2]
-                                     == grille[6]) and (grille[2] != " "):
+    if (grille[2] == grille[4]) and (grille[2]== grille[6]) and (grille[2] != " "):
         return 1
 
 # Détection des matchs nuls
 def est_match_nul(grille):
     for i in range(9):
-        if grille[i] == " ":
-            return 0
-    return 1
+        if grille[i] == " ": #si l'une des cases est vide alors return 0 = ok
+            return 0 #return faux d'une fonction
+    return 1 #return vrai d'une fonction
 
 # Détection du gagnant
-Clic = 0
 while gagne == 0:
     tour(grille, joueur)
     if est_gagnant(grille):
@@ -108,28 +96,3 @@ while gagne == 0:
     else:
         joueur = 1
 
-# Création de la fenêtre principale
-Mafenetre = Tk()
-Mafenetre.title("Morpion")
-# Création d'un widget Canvas
-Largeur = 300
-Hauteur = 300
-Canevas = Canvas(Mafenetre, width = Largeur, height =Hauteur, bg ="white")
-# La méthode bind() permet de lier un événement avec une fonction :
-# un clic gauche sur la zone graphique provoquera l'appel de la fonction utilisateur Clic()
-Canevas.bind("<Button-1>", Clic)
-Canevas.pack(padx =5, pady =5)
-#ici on créer les lignes qui délimite les colones et les cases
-Canevas.create_line(0,100,300,100,fill="black",width=4)
-
-Canevas.create_line(0,200,300,200,fill="black",width=4)
-
-Canevas.create_line(100,300,300,-100000,fill="black",width=4)
-
-Canevas.create_line(200,300,300,-100000,fill="black",width=4)
-
-
-# Création d'un widget Button (bouton Quitter)
-Button(Mafenetre, text ="Quitter", command = Mafenetre.destroy).pack(side=LEFT,padx=5,pady=5)
-
-Mafenetre.mainloop()
